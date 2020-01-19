@@ -1,0 +1,43 @@
+.navbar {
+  padding: 1rem 3rem;
+
+  .logo {
+    margin-right: 70px;
+  
+    img {
+      height: 47px;
+    }
+  }
+}
+
+.navbar-nav {
+  a {
+    font-size: $font-size-7;
+    color: $black1
+  }
+}
+
+.nav-item {
+  margin-right: 35px;
+}
+
+.form-inline {
+  img {
+    margin-right: 20px;
+  }
+
+  .signin {
+    color: $blue1;
+    cursor: pointer;
+    font-size: $font-size-6;
+  }
+}
+
+.play-song {
+  @include styleBtn($blue1, $blue1, $white, 30px);
+
+  font-size: $font-size-6;
+  padding: 2px 50px;
+  margin-right: 40px;
+}
+

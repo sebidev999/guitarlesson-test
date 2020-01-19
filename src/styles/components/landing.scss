@@ -1,0 +1,150 @@
+app-landing {
+  .landing {
+    .landing-background-img {
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  
+    .guitar-lesson {
+      background-image: url('/assets/home/titule.png');
+      height: 125px;
+      margin-top: 120px;
+      margin-left: 55px;
+    }
+
+    .guitar-man {
+      background-image: url('/assets/home/manguitar.png');
+      height: 810px;
+      width: 97%;
+    }
+
+    .social-icon {
+      width: 3%;
+
+      .dot {
+        background-image: url('/assets/home/dot.png');
+        height: 18px;
+        margin-bottom: 20px;
+      }
+
+      .facebook {
+        background-image: url('/assets/home/facebook.png');
+        height: 68px;
+        margin-bottom: 40px;
+      }
+
+      .instagram {
+        background-image: url('/assets/home/instagram.png');
+        height: 68px;
+        margin-bottom: 40px;
+      }
+
+      .twitter {
+        background-image: url('/assets/home/instagram.png');
+        height: 68px;
+      }
+    }
+
+  
+    .describe-yourself {
+      margin-top: 90px;
+      display: flex;
+  
+      .content-select {
+        width: 20px;
+        margin-right: 30px;
+
+        .container {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 22px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          height: 22px;
+        }
+        
+        .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 8px;
+          width: 8px;
+          background-color: #eee;
+          border: 1px solid $gray;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+        .container:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+        
+        .container input:checked ~ .checkmark {
+          background-color: $blue1;
+          border: 1px solid $blue1;
+        }
+
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        
+        .container input:checked ~ .checkmark:after {
+          display: block;
+        }
+        
+        .container .checkmark:after {
+          top: 9px;
+          left: 9px;
+          border-radius: 50%;
+          background: $white;
+        }
+      }
+  
+      .signup-content {
+        max-width: 640px;
+        .step {
+          .title {
+            font-size: $font-size-11;
+            line-height: 32px;
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+
+    .opion-label {
+      @include styleBtn($blue2, $blue2, $black1, 30px);
+      width: 100%;
+      font-size: $font-size-8;
+      text-align: center;
+      margin: .5rem!important;
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: $blue1;
+        color: $white;
+      }
+    }
+
+    .signup {
+      @include styleBtn($blue1, $blue1, $white, 18px);
+      width: 100%;
+      font-size: $font-size-8;
+      margin: .5rem!important;
+    }
+  }
+}
