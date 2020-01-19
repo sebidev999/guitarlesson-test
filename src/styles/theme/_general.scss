@@ -1,0 +1,22 @@
+body {
+  background: $white;
+  color: $black1;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+$width-list: (
+        '.w-5'  5%,
+        '.w-10' 10%,
+        '.w-15' 15%,
+        '.w-20' 20%,
+        '.w-30' 30%,
+);
+
+@each $value in $width-list {
+  #{nth($value, 1)} {
+    width: nth($value, 2) !important;
+  }
+}

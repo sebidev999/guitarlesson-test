@@ -1,0 +1,33 @@
+@mixin styleBtn ($background, $border, $color, $radius) {
+  background-color: $background;
+  border: 1px solid $border;
+  color: $color;
+  border-radius: $radius;
+}
+
+.btn {
+  font-size: $font-size-2;
+  outline: none;
+  border-radius: 0;
+}
+
+.btn-primary {
+
+  @include styleBtn($blue1, $blue1, $white, $radius);
+
+  &:not(:disabled):not(.disabled):active {
+    @include styleBtn($blue1, $blue1, $white, $radius);
+  }
+
+  &:hover {
+    @include styleBtn($blue1, $blue1, $white, $radius);
+  }
+
+  &:focus {
+    @include styleBtn($blue1, $blue1, $white, $radius);
+  }
+
+  &:disabled {
+    @include styleBtn($blue1, $blue1, $white, $radius);
+  }
+}
