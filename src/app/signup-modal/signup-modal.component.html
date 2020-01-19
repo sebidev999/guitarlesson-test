@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Sign up</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>Please fill in this form to create an account.</p>
+
+  <div class="form-group">
+    <label for="usr">Email:</label>
+    <input type="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="pwd">First Name:</label>
+    <input type="text" class="form-control">
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">Submit</button>
+</div>
