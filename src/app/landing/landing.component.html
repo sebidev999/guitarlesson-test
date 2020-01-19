@@ -1,0 +1,81 @@
+<div class="landing row">
+  <div class="col-lg-6 col-lg-md-6 col-sm-12 col-12 ">
+    <div class="landing-background-img guitar-lesson">
+    </div>
+    <div class="describe-yourself flex">
+      <div class="content-select">
+        <label class="container">
+          <input type="radio" name="radio" value="step1" [(ngModel)]="currentStep">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">
+          <input type="radio" name="radio" value="step2" [(ngModel)]="currentStep">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">
+          <input type="radio" name="radio" value="step3" [(ngModel)]="currentStep">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">
+          <input type="radio" name="radio" value="step4" [(ngModel)]="currentStep">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="signup-content">
+        <div class="step" *ngIf="currentStep === 'step1'">
+          <div class="alert alert-danger" role="alert" *ngIf="isClickedSignupModal && (!step1.level || !step1.learningItem )">
+            Please select what describer you the most.
+          </div>
+          <div class="title mb-3">How would you describe <b>Yourself ?</b></div>
+          <div class="d-flex">
+            <div class="opion-label" [class.active]="step1.level === 'beginner'" (click)="step1.level = 'beginner'">I'm a begineer</div>
+            <div class="opion-label" [class.active]="step1.level === 'expert'" (click)="step1.level = 'expert'">I've been playing a while</div>
+          </div>
+          <div class="title mb-3 mt-4">What are you most interested in learning <b>right now?</b></div>
+          <div class="d-flex">
+            <div class="opion-label" [class.active]="step1.learningItem === 'soloing'" (click)="step1.learningItem = 'soloing'">Soloing</div>
+            <div class="opion-label" [class.active]="step1.learningItem === 'chords'" (click)="step1.learningItem = 'chords'">Chords</div>
+          </div>
+          <div class="d-flex">
+            <div class="opion-label" [class.active]="step1.learningItem === 'songs'" (click)="step1.learningItem = 'songs'">Songs</div>
+            <div class="opion-label" [class.active]="step1.learningItem === 'fretboard'" (click)="step1.learningItem = 'fretboard'">Fretboard</div>
+          </div>
+          <div class="d-flex">
+            <div class="opion-label" [class.active]="step1.learningItem === 'music'" (click)="step1.learningItem = 'music'">Music</div>
+            <div class="opion-label" [class.active]="step1.learningItem === 'everything'" (click)="step1.learningItem = 'everything'">A Little Bit Of Everything</div>
+          </div>
+          <div class="p-2">
+            <button class="btn signup" (click)="openSignupModal()">Sign Me Up For Free Guitar Lessons</button>
+          </div>
+        </div>
+        <div class="step text-center" *ngIf="currentStep === 'box2'">
+          Box2
+        </div>
+        <div class="step text-center" *ngIf="currentStep === 'box3'">
+          Box3
+        </div>
+        <div class="step text-center" *ngIf="currentStep === 'box4'">
+          Box4
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-lg-md-6 col-sm-12 col-12">
+    <div class="d-flex align-items-center">
+      <div class="landing-background-img guitar-man">
+      </div>
+      <div class="social-icon">
+        <div class="landing-background-img dot"></div>
+        <a href="https://www.facebook.com/" target="_blank">
+          <div class="landing-background-img facebook"></div>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <div class="landing-background-img instagram"></div>
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+          <div class="landing-background-img twitter"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
