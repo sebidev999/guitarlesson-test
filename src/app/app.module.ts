@@ -9,12 +9,14 @@ import { LandingComponent } from './landing/landing.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SignupModalComponent } from './signup-modal/signup-modal.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
+import { ShopComponent } from './shop/shop.component';
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     SignupModalComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
