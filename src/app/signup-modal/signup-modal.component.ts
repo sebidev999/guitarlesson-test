@@ -27,7 +27,7 @@ export class SignupModalComponent implements OnInit {
 
   public onSubmit() {
     this.submitted = true;
-    console.log('form', this.signupForm.value);
+
     if (this.signupForm.invalid) {
       return;
     }
