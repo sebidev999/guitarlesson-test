@@ -36,7 +36,7 @@ export class SignupModalComponent implements OnInit {
       method: 'POST',
       url: 'https://www.guitarzoom.com',
       data: this.signupForm.value,
-      done: (res) => {
+      success: (res) => {
         console.log('POST Succeed', res);
       },
       error: (err) => {
