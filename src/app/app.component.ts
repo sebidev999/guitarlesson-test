@@ -10,7 +10,7 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
 })
 export class AppComponent {
   public bsModalRef: BsModalRef;
-  title = 'guitarless';
+  public isShowMobileBar: boolean;
 
   constructor(private modalService: BsModalService) {}
 
